@@ -55,14 +55,9 @@
 </template>
 
 <script>
-import food from '../data/food.json'
+
 export default {
   name: 'Home',
-  data () {
-    return {
-      inventory: food
-    }
-  },
-  components: {}
+  props: ['inventory', 'addToCart']
 }
 </script>
