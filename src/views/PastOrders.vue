@@ -34,10 +34,3 @@
         </table>
       </main>
 </template>
-
-<script>
-
-export default {
-  props: ['inventory', 'addToCart']
-}
-</script>
