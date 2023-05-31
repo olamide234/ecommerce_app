@@ -1,4 +1,8 @@
 /* ITCSS: Settings */
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
 @import '_root';
 @import '_var.sass';
 

@@ -20,7 +20,7 @@
 import ProductList from '../components/ProductList.vue'
 
 export default {
-  name: 'Home',
+  name: 'Products',
   props: ['inventory', 'addToCart'],
   components: { ProductList }
 }
