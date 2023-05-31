@@ -4,7 +4,13 @@
       <h1>Products</h1>
 
       <div class="card-container">
-        <ProductList :inventory='inventory' :addToCart='addToCart'/>
+        <ProductList
+          v-for="(product, i) in inventory"
+          :key="product.id"
+          :productDetails='product'
+          :index=i
+          :addToCart='addToCart'
+        />
       </div>
     </main>
   </div>

@@ -10,8 +10,14 @@
       <h2>Recommended</h2>
 
       <div class="recommended">
-        <ProductList :inventory='inventory.slice(0, 3)' :addToCart='addToCart'/>
+        <ProductList
+          v-for="(product, i) in inventory.slice(0, 3)" :key="product.id"
+          :productDetails='product'
+          :index=i
+          :addToCart='addToCart'
+         />
       </div>
+      <div class="centered-div"><button class="big-btn btn-dark" @click="this.$router.push('/products')">View all items</button></div>
     </main>
   </div>
 </template>

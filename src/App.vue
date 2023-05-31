@@ -17,7 +17,7 @@
       <span>Cart ({{totalQuantity}})</span>
     </div>
   </header>
-  <router-view :inventory="inventory" :addToCart="addToCart"/>
+  <router-view :inventory="inventory" :addToCart="addToCart" :toggle="toggleSideBar"/>
 
   <SideBar
     v-if="showSideBar"
@@ -51,13 +51,11 @@ export default ({
     }
   },
   methods: {
-    addToCart (name, index) {
+    addToCart (name, quantity) {
       if (!this.cart[name]) this.cart[name] = 0
-      this.cart[name] += this.inventory[index].quantity
-      this.inventory[index].quantity = 0
+      this.cart[name] += quantity
     },
     toggleSideBar () {
-      console.log('fish')
       this.showSideBar = !this.showSideBar
     },
     removeItem (name) {
